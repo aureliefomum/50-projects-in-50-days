@@ -2,6 +2,7 @@
 
 :root {
 	--border-color: #144fc6;
+	--background-color: #144fc6;
 }
 * {
 	box-sizing: border-box;
@@ -80,14 +81,14 @@ h3 {
 }
 
 .percentage {
-	background-color: var(--fill-color);
+	background-color: lightblue;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
 	font-size: 30px;
-	height: 0;
 	transition: 0.3s ease;
+	height: 0;
 }
 
 .text {
