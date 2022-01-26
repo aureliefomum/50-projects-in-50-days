@@ -1,14 +1,10 @@
 const API_URL = `https://api.jikan.moe/v3/search/anime?q=Fate/Zero&page=1&limit=10`;
 
-//const IMG_PATH =
-
 //Get initial animes
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
-
-//getAnimes(API_URL);
 
 async function getAnimes(url) {
 	const res = await fetch(url);
