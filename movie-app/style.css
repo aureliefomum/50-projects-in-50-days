@@ -46,7 +46,7 @@ main {
 	flex-wrap: wrap;
 }
 
-.movie {
+.anime {
 	width: 300px;
 	margin: 1rem;
 	background-color: var(--secondary-color);
@@ -56,11 +56,11 @@ main {
 	border-radius: 3px;
 }
 
-.movie img {
+.anime img {
 	width: 100%;
 }
 
-.movie-info {
+.anime-info {
 	color: #eee;
 	display: flex;
 	align-items: center;
@@ -69,28 +69,28 @@ main {
 	letter-spacing: 0.5px;
 }
 
-.movie-info h3 {
+.anime-info h3 {
 	margin-top: 0;
 }
 
-.movie-info span {
+.anime-info span {
 	background-color: var(--primary-color);
 	padding: 0.25rem 0.5rem;
 	border-radius: 3px;
 	font-weight: bold;
 }
 
-.movie-info span.green {
+.anime-info span.green {
 	color: lightgreen;
 }
-.movie-info span.orange {
+.anime-info span.orange {
 	color: orange;
 }
-.movie-info span.red {
+.anime-info span.red {
 	color: red;
 }
 
-.overview {
+.synopsis {
 	background-color: #fff;
 	padding: 2rem;
 	position: absolute;
@@ -102,6 +102,6 @@ main {
 	transition: transform 0.3s ease-in;
 }
 
-.movie:hover .overview {
+.anime:hover .synopsis {
 	transform: translateY(0);
 }
