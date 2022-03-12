@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.empty {
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+	border: solid 3px black;
+	background-color: white;
+}
+
+@media (max-width: 800px) {
+	body {
+		flex-direction: column;
+	}
+}
