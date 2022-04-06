@@ -1,12 +1,26 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decreae");
+const sizeEl = document.getElementById("size");
+const colorEl = document.getElementById("color");
+const clearEl = canvas.getContext("clear");
 
 let size = 20;
+let isPressed = false;
 let color = "black";
+let x;
+let y;
+
+canvas.addEventListener("mousedown", (e) => {
+	isPressed = true;
+	x = e.offsetX;
+	y = e.offsetY;
+});
 
 function drawCircle(x, y) {
 	ctx.beginPath();
-	ctx.arc(x, y, size, 0, math.PI * 2);
+	ctx.arc(x, y, size, 0, Math.PI * 2);
 	ctx.fillStyle = color;
 	ctx.fill();
 }
