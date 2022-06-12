@@ -15,4 +15,7 @@ function getData(){
     profile_img.innerHTML = '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="user image">'
     userName.innerHTML ='John Doe'
     date.innerHTML ='Oct 08,2020'
+
+    animated_bgs.forEach(bg => classList.remove('animated-bg'))
+    animated_bg_texts.forEach(bg => classList.remove('animated-bg-text'))
 }
