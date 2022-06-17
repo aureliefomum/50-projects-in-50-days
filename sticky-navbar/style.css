@@ -14,7 +14,38 @@ body {
     max-width:1200px;
     margin:0 auto;
 }
- /* @todo Nav*/
+ 
+
+.nav{
+    position:fixed;
+    background-color: #222;
+    top:0;
+    left:0;
+    right:0;
+    transition:all .3s ease-in-out;
+}
+
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0;
+    transition:all .3s ease-in-out;
+    
+}
+
+.nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a{
+    color:#fff;
+    text-decoration: none;
+    padding:7px 15px;
+}
 
  .hero{
     background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -57,5 +88,11 @@ body {
  .content h2, 
  .content h3{
     font-size:150%;
-    margin:10px 0;
+    margin:20px 0;
+ }
+
+ .content p {
+    color:#555;
+    line-height: 30px;
+    letter-spacing: 1.2px;
  }
