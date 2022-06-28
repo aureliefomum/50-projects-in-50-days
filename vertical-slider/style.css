@@ -7,7 +7,7 @@
 }
 body {
 	font-family: "Open Sans", sans-serif;
-	height:100vh
+	height:100vh;
 }
 
 .slider-container{
@@ -15,7 +15,6 @@ body {
     overflow: auto;
     width: 100vw;
     height:100vh;
-    border:4px solid yellow;
 }
 
 .left-slide{
@@ -24,6 +23,7 @@ body {
     position: absolute;
     top:0;
     left:0;
+    transition: transform .5s ease-in-out ; 
 }
 
 .left-slide > div {
@@ -48,7 +48,8 @@ body {
     top: 0;
     left:35%;
     width:65%;
-}
+     transition: transform .5s ease-in-out ;
+} 
 
 .right-slide > div {
     background-repeat: no-repeat;
