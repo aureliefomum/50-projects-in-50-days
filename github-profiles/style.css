@@ -43,7 +43,7 @@ body {
      outline: none;
 }
 
-.card{
+.card {
     max-width:800px;
     background-color:#4c2885 ;
     border-radius:20px ;
@@ -51,9 +51,65 @@ body {
     display: flex;
     padding: 3rem;
     margin: 0 1.5rem;
+    
 
 }
 
-.avatar{
+.avatar {
+    border:10px solid #2a2a72;
     border-radius: 50%;
+    height:150px;
+    width: 150px;
+
+}
+
+.user-info {
+    color: #eee;
+    margin-left: 2rem;
+}
+
+.user-info  h2{
+    margin-top:0;
+}
+
+.user-info  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding:0;
+    max-width:400px;
+}
+
+.user-info  ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info  ul li strong{
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+}
+
+
+.repos {
+    text-decoration: none;
+    color: #fff;
+    background-color: #212a72;
+    padding:0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+
+}
+
+
+@media(max-width:500px){
+    .card{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .user-form{
+        max-width: 400px;
+    }
 }
