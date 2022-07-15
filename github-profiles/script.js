@@ -1,8 +1,10 @@
-const API_URL = "https://api.github.com/users/"
+const API_URL = 'https://api.github.com/users/'
 
 const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
+
+
 
 
 
@@ -13,6 +15,23 @@ async function getUser(username) {
         const { data } = await axios(API_URL + username)
 
     createUserCard(data)
+
+    getRepos(username)
+    
+    } catch (error) {
+        if(error.response.status == 404){
+            createErrorCard('No profile with this username found')
+        }
+        
+    }
+    
+}
+async function getRepos(username) {
+
+    try {
+        const { data } = await axios(API_URL + username + '/repos?sort=created')
+
+    addReposToCard(data)
     } catch (error) {
         if(error.response.status == 404){
             createErrorCard('No profile with this username found')
@@ -30,6 +49,25 @@ function createErrorCard(message){
     </div>
     `
     main.innerHTML = cardHTML
+}
+
+
+function addReposToCard(repos){
+    const reposEl = document.getElementById('repos')
+
+    repos
+    .slice(0, 10)
+    .forEach(repo => {
+        const repoLink = document.createElement('a')
+
+        repoLink.classList.add('repo')
+        repoLink.href = repo.html_url
+        repoLink.target = '_blank'
+        repoLink.innerText = repo.name
+
+        reposEl.appendChild(repoLink)
+
+    })
 }
 
 
